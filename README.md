@@ -44,14 +44,6 @@ A lightweight React-based note-taking app that allows users to add and view note
 - **Why plain CSS**:  
   Plain CSS gives full control over styling and is more lightweight than UI libraries or Tailwind for a small project.
 
-#### **Navigation**
-- **Why this nav approach for simplicity**:  
-  Simple button-based nav avoids router complexity. Just toggling views via a state variable is cleaner for a 2-view app.
-
-#### **UX Feedback**
-- **Why show spinner here**:  
-  To indicate that saving is in progress (if async logic is added later).
-
 - **Why display error banner**:  
   Helps notify the user if localStorage fails (e.g. storage quota issues).
 
