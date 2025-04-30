@@ -1,9 +1,6 @@
-// src/components/NotesList.jsx
 
 import { useEffect, useState } from "react";
 import { getNotes } from "../storage";
-
-// Why useEffect to sync storage → state: Needed to load data from localStorage on mount
 
 const NotesList = () => {
   const [notes, setNotes] = useState([]);
@@ -11,7 +8,7 @@ const NotesList = () => {
   useEffect(() => {
     const storedNotes = getNotes();
     setNotes(storedNotes);
-  }, []); // empty dependency array means it runs once on mount
+  }, []);
 
   return (
     <div className="notes-list">
@@ -23,7 +20,7 @@ const NotesList = () => {
           {notes.map((note, index) => (
             <li key={index} className="note-item">
               <h3>{note.title}</h3>
-              <p>{note.content.slice(0, 50)}...</p> {/* Show snippet of content */}
+              <p>{note.content.slice(0, 50)}...</p>
             </li>
           ))}
         </ul>

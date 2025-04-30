@@ -1,9 +1,5 @@
-// src/components/AddNote.jsx
-
 import { useState } from "react";
 import { saveNotes, getNotes } from "../storage";
-
-// Why I chose useState + this submit handler: useState is simple and ideal for local component state
 
 const AddNote = ({ onAdd }) => {
   const [title, setTitle] = useState("");
@@ -17,7 +13,7 @@ const AddNote = ({ onAdd }) => {
     const updatedNotes = [...existingNotes, newNote];
 
     saveNotes(updatedNotes);
-    onAdd(updatedNotes); // update parent state
+    onAdd(updatedNotes); 
 
     setTitle("");
     setContent("");

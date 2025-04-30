@@ -7,24 +7,24 @@ import "./App.css";
 function App() {
   const [notes, setNotes] = useState(getNotes());
   const [activeView, setActiveView] = useState("add");
-  const [isLoading, setIsLoading] = useState(false); // for loading spinner
-  const [hasError, setHasError] = useState(false); // for error message
+  const [isLoading, setIsLoading] = useState(false); 
+  const [hasError, setHasError] = useState(false); 
 
   useEffect(() => {
     setNotes(getNotes());
   }, []);
 
   const handleAddNote = (newNotes) => {
-    setIsLoading(true); // Start loading
-    setHasError(false); // Reset error state
+    setIsLoading(true); 
+    setHasError(false); 
 
     try {
       saveNotes(newNotes);
-      setNotes(newNotes); // Update state
+      setNotes(newNotes);
     } catch (error) {
-      setHasError(true); // If error occurs
+      setHasError(true); 
     } finally {
-      setIsLoading(false); // End loading
+      setIsLoading(false); 
     }
   };
 

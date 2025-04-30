@@ -107,7 +107,6 @@ nav button:hover {
   background-color: #555;
 }
 
-/* Loading and Error States */
 .loading-spinner {
   background-color: #333;
   color: #fff;

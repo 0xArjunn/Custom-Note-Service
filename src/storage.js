@@ -1,5 +1,3 @@
-// src/storage.js
-
 const STORAGE_KEY = "custom_notes";
 
 export const getNotes = () => {
